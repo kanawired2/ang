@@ -1,7 +1,6 @@
 import {Component, OnInit} from "@angular/core";
 import {ApiService} from "./api.service";
 import {IPosts} from "./posts";
-import { HttpClient } from '@angular/common/http';
  
  @Component({
 	selector: 'app-posts',
@@ -24,16 +23,6 @@ import { HttpClient } from '@angular/common/http';
      }
 
 
-     /*constructor(private httpClient:HttpClient){  }
-      getPosts(){
-        this.httpClient.get(`https://jsonplaceholder.typicode.com/posts`)
-        .subscribe(
-          (data:any[]) => {
-            console.log(data);
-          }
-        )
-      }*/
- 
      ngOnInit(): void {
          this.getPosts();
      }
