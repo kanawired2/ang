@@ -1,20 +1,12 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from '@angular/common/http';
 import { Observable } from "rxjs/Observable";
-import { IPosts } from "./posts";
-import { User } from "./user";
+//import { Users } from "./users";
 
 @Injectable()
-export class ApiService {
+export class UserServiceService {
 
-  private URL = "http://local-drupal.com/dtutor/jcontent";
-
-  private ContentUrl = "";
-
-  	/*Hero = [{
-  		name:'admin',
-  		pass:'admin123'
-  	}];*/
+  /*private URL = "http://local-drupal.com/dtutor/jcontent";
 
   constructor(protected httpClient: HttpClient) {}
  
@@ -24,20 +16,12 @@ export class ApiService {
 		.catch(this.handleError);
 	}
 
-
-  viewContent(e){ 
-   
-    this.ContentUrl = e.target.href;
-
-    return this.httpClient.get(this.ContentUrl).subscribe(data => {
-      console.log(data);
-    });     
-  }
-
   
-	
+	public create(hero: User): Observable<User> {
+		return this.httpClient.post<User>(this.LoginUrl, hero);
+	}
 
   	private handleError(error: Response) {
     	return Observable.throw(error.statusText);
- 	}
+ 	}*/
 }

@@ -6,14 +6,16 @@
              <tr>
                  <th class="text-center">ID</th>
                  <th class="text-center">Title</th>
-                 <!-- <th class="text-center">Body</th> -->
+                 <th class="text-center">View</th>
              </tr>
              </thead>
              <tbody>
              <tr *ngFor="let post of _postsArray">
-                 <td class="text-center" style="width: 15px;">{{post.nid}}</td>
-                 <td class="text-center" style="width: 200px;">{{post.title}}</td>
-                 <!-- <td class="text-center">{{post.body}}</td> -->
+                <td class="text-center" style="width: 15px;">{{post.nid}}</td>
+                <td class="text-center" style="width: 200px;">{{post.title}}</td>
+                <td class="text-center"> 
+                    <a (click)="viewContent($event)" href="{{post.nothing}}">View</a>
+                </td>
              </tr>
              </tbody>
          </table>

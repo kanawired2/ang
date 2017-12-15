@@ -1,20 +1,12 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from '@angular/common/http';
 import { Observable } from "rxjs/Observable";
-import { IPosts } from "./posts";
-import { User } from "./user";
+import { Content } from "./content";
 
 @Injectable()
 export class ApiService {
 
-  private URL = "http://local-drupal.com/dtutor/jcontent";
-
-  private ContentUrl = "";
-
-  	/*Hero = [{
-  		name:'admin',
-  		pass:'admin123'
-  	}];*/
+  /*private URL = "http://local-drupal.com/dtutor/node/188?_format=json";
 
   constructor(protected httpClient: HttpClient) {}
  
@@ -24,20 +16,7 @@ export class ApiService {
 		.catch(this.handleError);
 	}
 
-
-  viewContent(e){ 
-   
-    this.ContentUrl = e.target.href;
-
-    return this.httpClient.get(this.ContentUrl).subscribe(data => {
-      console.log(data);
-    });     
-  }
-
-  
-	
-
   	private handleError(error: Response) {
     	return Observable.throw(error.statusText);
- 	}
+ 	}*/
 }

@@ -12,6 +12,7 @@ import { ArticleService } from './article.service';
 import { ApiService } from './posts/api.service';
 import { LoginComponent } from './login/login.component';
 import { UsersComponent } from './users/users.component';
+import { ViewComponent } from './view/view.component';
 
 @NgModule({
   imports: [     
@@ -40,7 +41,8 @@ import { UsersComponent } from './users/users.component';
         ArticleComponent,
         PostsComponent,
         LoginComponent,
-        UsersComponent
+        UsersComponent,
+        ViewComponent
   ],
   providers: [
         ArticleService,
